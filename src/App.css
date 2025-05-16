@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Primary colors */
+  --color-primary-100: #E0F2FF;
+  --color-primary-200: #B8E2FF;
+  --color-primary-300: #8CCDFF;
+  --color-primary-400: #48AAFF;
+  --color-primary-500: #0A84FF;
+  --color-primary-600: #0068D6;
+  --color-primary-700: #004FA3;
+  
+  /* Success colors */
+  --color-success-100: #E3FBE9;
+  --color-success-200: #C2F2CE;
+  --color-success-300: #93E8A6;
+  --color-success-400: #59DC7D;
+  --color-success-500: #30D158;
+  --color-success-600: #20B344;
+  --color-success-700: #158A33;
+  
+  /* Warning colors */
+  --color-warning-100: #FFF4E3;
+  --color-warning-200: #FFE4B8;
+  --color-warning-300: #FFD08C;
+  --color-warning-400: #FFBC5F;
+  --color-warning-500: #FF9F0A;
+  --color-warning-600: #DB8004;
+  --color-warning-700: #A86001;
+  
+  /* Error colors */
+  --color-error-100: #FFE9E7;
+  --color-error-200: #FFCEC9;
+  --color-error-300: #FFA7A0;
+  --color-error-400: #FF7D73;
+  --color-error-500: #FF453A;
+  --color-error-600: #DB2A20;
+  --color-error-700: #A81C13;
+  
+  /* Neutral colors */
+  --color-neutral-50: #F9FAFB;
+  --color-neutral-100: #F3F4F6;
+  --color-neutral-200: #E5E7EB;
+  --color-neutral-300: #D1D5DB;
+  --color-neutral-400: #9CA3AF;
+  --color-neutral-500: #6B7280;
+  --color-neutral-600: #4B5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1F2937;
+  --color-neutral-900: #111827;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-50);
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50;
+}
+
+.btn-primary {
+  @apply bg-[#0A84FF] hover:bg-[#0068D6] text-white focus:ring-[#0A84FF];
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-100 text-[#0A84FF] border border-[#0A84FF] focus:ring-[#0A84FF];
+}
+
+.btn-success {
+  @apply bg-[#30D158] hover:bg-[#20B344] text-white focus:ring-[#30D158];
+}
+
+.btn-danger {
+  @apply bg-[#FF453A] hover:bg-[#DB2A20] text-white focus:ring-[#FF453A];
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-200 hover:shadow-md;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0A84FF] focus:border-transparent transition-colors;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-100);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-300);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-400);
+}
